@@ -1,0 +1,50 @@
+<script>
+//Compare two JSON having same properties without having same properties
+
+
+var obj1 = { name: 'person 1', age: 5 };
+var obj2 = { age: 5, name: 'person 2' };
+
+var flag = true;
+
+for (var key in obj1) {
+  if (obj1[key] !== obj2[key]) {
+    flag = false;
+  }
+}
+
+console.log(flag);
+</script>
+    
+</script>
+
+<script>
+//Display all the countries flags in the console
+
+const request = new XMLHTTPRequest()
+request.open(GET,"https://restcountries.com/v3.1/all")
+request.send(null)
+request.onload = function () {
+const responce = JSON.parse(request.responseText)
+for(var coutry of responce){
+    var{flag} = Country
+console.log(`Country Flag = ${flag}`)
+}
+}
+
+</script>
+
+
+<script>
+//rest countries and print all countries,regions,sub-regions,and populations
+
+const request = new XMLHTTPRequest()
+request.open(GET,"https://restcountries.com/v3.1/all")
+request.send(null)
+request.onload = function ()
+{
+  var {name,region,population} = Country
+  var{country} = name
+  console.log("Name = ${common}, Region = ${region}, Subregion = $({subregion}"), population = $(population)
+}
+</script>
